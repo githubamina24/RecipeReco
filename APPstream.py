@@ -65,7 +65,7 @@ def main():
     
     if session_state.execute_recsys:
 
-        col1, col2, col3 = st.columns([1, 6, 1])
+        col1, col2, col3 = st.beta_columns([1, 6, 1])
         #recipe = rec_sys.RecSys(ingredients)
         recipe = get_recs(ingredients, mean=True)
         #gif_runner.empty()
@@ -97,7 +97,7 @@ def main():
             ingredients_disp = selection_details.ingredients.values[0].split(",")
 
             st.subheader("Ingredients:")
-            col1, col2 = st.columns(2)
+            col1, col2 = st.beta_columns(2)
             ingredients_disp = [
                 ingred
                 for ingred in ingredients_disp
